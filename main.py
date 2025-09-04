@@ -20,9 +20,6 @@ answers=[]
 while len(answers)<50:
     u_answer = screen.textinput(title="Tpe a state", prompt=f"{score}/50 correct").title()
     if u_answer=="Exit":
-        missing_states=[state for state in states if state not in answers]
-        new_data=pandas.DataFrame(missing_states)
-        new_data.to_csv("states_to_learn.csv")
         break
     if u_answer in answers:
         continue
